@@ -1,0 +1,7 @@
+*.user
+*.db
+*.opendb
+.vs/
+ipch/
+x64/
+x86/
