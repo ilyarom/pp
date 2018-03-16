@@ -146,12 +146,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cannibal.h" />
+    <ClInclude Include="Cook.h" />
     <ClInclude Include="Pot.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadsHandler.h" />
+    <ClInclude Include="Tribe.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cannibal.cpp" />
+    <ClCompile Include="Cook.cpp" />
     <ClCompile Include="Lab2.cpp" />
     <ClCompile Include="Pot.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -160,6 +164,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ThreadsHandler.cpp" />
+    <ClCompile Include="Tribe.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

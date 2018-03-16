@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Pot.h"
 
-size_t CPot::GetMeatCount() {
+size_t CPot::GetMeatCount() const {
 	return m_meatCount;
 }
 
