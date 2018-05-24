@@ -12,19 +12,10 @@ void CCannibal::Eat(CPot &pot, const CCook &cook) {
 	throw std::exception("Pot is empty");
 }
 
-DWORD WINAPI CCannibal::Live(CONST LPVOID data) {
-	while (true) {
-		TribeCookingData *tribeCookingData = (TribeCookingData *)data;
-		try {
-			Eat(*tribeCookingData->pot, *tribeCookingData->cook);
-		}
-		catch(std::exception exc) {
-			if (!(*tribeCookingData->cook).isNeedCooking()) {
-				(*tribeCookingData->cook).SetNeedCooking(true);
-			}
-		}
-		int sleepingTime = rand() % 2000 + 1000;
-		Sleep(sleepingTime);
-	}
-	return 0;
+CCannibal::CCannibal(std::string name) {
+	m_name = name;
+}
+
+std::string CCannibal::GetName() {
+	return m_name;
 }

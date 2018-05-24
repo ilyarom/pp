@@ -8,4 +8,3 @@ public:
 private:
 	size_t m_meatCount = 0;
 };
-

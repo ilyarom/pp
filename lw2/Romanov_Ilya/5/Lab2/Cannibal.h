@@ -2,11 +2,16 @@
 #include "Pot.h"
 #include "Cook.h"
 #include <windows.h>
+#include <string>
+
 class CCannibal
 {
 public:
 	CCannibal() = default;
+	CCannibal(std::string name);
 	void Eat(CPot &pot, const CCook &cook);
-	DWORD WINAPI Live(CONST LPVOID data);
+	std::string GetName();
+private:
+	std::string m_name;
 };
 

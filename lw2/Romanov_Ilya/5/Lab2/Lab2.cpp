@@ -1,13 +1,14 @@
-// Lab2.cpp: определяет точку входа для консольного приложения.
-//
-
 #include "stdafx.h"
 #include "Tribe.h"
 
+HANDLE CTribe::semaphore;
+
 int main()
 {
-	CTribe tribe(1);
+	CTribe::semaphore = CreateSemaphore(NULL, 1, 1, NULL);
+	CTribe tribe(5);
+	std::cout << "Tribe created" << std::endl;
 	tribe.Live();
-    return 0;
+	return 0;
 }
 
