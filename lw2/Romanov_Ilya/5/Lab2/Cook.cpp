@@ -1,11 +1,11 @@
 #include "stdafx.h"
 #include "Cook.h"
 
-bool CCook::isNeedCooking() const {
+bool CCook::IsNeedCooking() const {
 	return isNeedCook;
 }
 
-bool CCook::isCooking() const {
+bool CCook::IsCooking() const {
 	return isCook;
 }
 

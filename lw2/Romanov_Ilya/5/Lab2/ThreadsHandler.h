@@ -8,6 +8,6 @@ public:
 	void Wait();
 	~ThreadsHandler();
 private:
-	std::vector<HANDLE> handles = {};
+	std::vector<HANDLE> handles;
 };
 

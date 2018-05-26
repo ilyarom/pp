@@ -1,7 +1,6 @@
 #pragma once
 #include "Pot.h"
 #include "Cook.h"
-#include <windows.h>
 #include <string>
 
 class CCannibal

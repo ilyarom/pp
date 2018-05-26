@@ -7,8 +7,8 @@ class CCook
 public:
 	CCook() = default;
 	void StewMissionary(CPot &pot);
-	bool isNeedCooking() const;
-	bool isCooking() const;
+	bool IsNeedCooking() const;
+	bool IsCooking() const;
 	void SetNeedCooking(bool arg);
 private:
 	bool isNeedCook = true;

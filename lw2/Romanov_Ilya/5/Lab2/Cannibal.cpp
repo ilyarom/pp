@@ -2,7 +2,6 @@
 #include "Cannibal.h"
 #include "Tribe.h"
 #include <stdexcept>
-#include <windows.h>
 
 void CCannibal::Eat(CPot &pot, const CCook &cook) {
 	if (pot.GetMeatCount() != 0) {

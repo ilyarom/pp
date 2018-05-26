@@ -16,7 +16,7 @@ DWORD WINAPI CTribe::RunCookLife(CONST LPVOID data) {
 	while (true) {
 		CCook *cook = cookingData->cook;
 		CPot *pot = cookingData->pot;
-		if (cook->isNeedCooking() && !cook->isCooking()) {
+		if (cook->IsNeedCooking() && !cook->IsCooking()) {
 			PrintMessage("[Cook]: Empty pot? Guys, please wait " + std::to_string(missionary.STEW_TIME / SECOND_TO_MILISECOND_DIFFERENCE) + " seconds");
 			cookingData->cook->StewMissionary(*pot);
 		}
@@ -42,13 +42,15 @@ DWORD WINAPI CTribe::RunCannibalLife(CONST LPVOID data) {
 			WaitForSingleObject(semaphore, INFINITE);
 			CCannibal *cannibal = cannibalData->cannibal;
 			CCook *cook = cannibalData->cookingData->cook;
-			if (!cook->isNeedCooking() && !cook->isCooking()) {
+			if (!cook->IsNeedCooking() && !cook->IsCooking()) {
 				PrintMessage("[Cannibal " + cannibal->GetName() + "]: Hey cook! Where is my meat!!!");
 				cook->SetNeedCooking(true);
 			}
 			ReleaseSemaphore(semaphore, 1, NULL);
 		}
-		const int SLEEPING_TIME = rand() % 2000 + 1000;
+		//std::srand(std::time(NULL));
+		std::random_device rnd;
+		const int SLEEPING_TIME = rnd() % 2000 + 1000;
 		Sleep(SLEEPING_TIME);
 	}
 	return 0;

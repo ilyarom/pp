@@ -4,6 +4,8 @@
 #include "Pot.h"
 #include <vector>
 #include "ThreadsHandler.h"
+#include <cstdlib>
+#include <random>
 
 class CTribe
 {
@@ -33,8 +35,8 @@ struct TribeCookingData {
 };
 
 struct CannibalData {
-	TribeCookingData * cookingData;
-	CCannibal * cannibal;
+	TribeCookingData *cookingData;
+	CCannibal *cannibal;
 	CannibalData(TribeCookingData *cookArg, CCannibal *cannibalArg) {
 		cookingData = cookArg;
 		cannibal = cannibalArg;
